@@ -15,7 +15,7 @@
 *.vcf
 *.xml
 dev/
-data/
+# data/
 
 ### direnv ###
 .direnv
