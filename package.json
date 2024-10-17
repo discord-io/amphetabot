@@ -1,0 +1,35 @@
+{
+  "name": "amphetabot-v2",
+  "version": "1.0.0",
+  "description": "Multi purpose discord bot",
+  "main": "index.js",
+  "type": "module",
+  "imports": {
+    "#client": "./src/client.js",
+    "#data/*": "./data/*",
+    "#util/*": "./src/util/*",
+    "#db": "./src/util/db.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "eddy-22",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "better-sqlite3": "^11.3.0",
+    "commander": "^12.1.0",
+    "dayjs": "^1.11.13",
+    "discord.js": "^14.16.3",
+    "fs-extra": "^11.2.0",
+    "lodash-es": "^4.17.21",
+    "lowdb": "^7.0.1",
+    "quick.db": "^9.1.7",
+    "sequelize": "^6.37.4",
+    "sqlite3": "^5.1.7"
+  }
+}
