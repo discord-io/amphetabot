@@ -19,7 +19,6 @@ dev/
 
 ### direnv ###
 .direnv
-.envrc
 
 ### dotenv ###
 .env
