@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import repl from 'node:repl';
 import client from "#client";
+import { initRepl } from './commands/repl.js';
 import { program } from "commander";
 
 client.on('messageCreate', async message => {
@@ -23,16 +24,9 @@ program.command('start', { isDefault: true })
     client.login(client.token);
   });
 
-program.command('repl').description('starts an interactive repl with the client')
-  .option('-l, --login', 'log in on startup', false)
-  .action(function (opts) {
-    const login = opts.login;
-    const r = repl.start({
-      prompt: "bot > ",
-      useColors: true
-    });
-
-  });
+program.command('repl')
+  .description('starts an interactive repl with the client')
+  .action(initRepl);
 
 
 program.parse();

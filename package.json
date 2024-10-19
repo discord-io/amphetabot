@@ -25,11 +25,13 @@
     "commander": "^12.1.0",
     "dayjs": "^1.11.13",
     "discord.js": "^14.16.3",
+    "form-data": "^4.0.1",
     "fs-extra": "^11.2.0",
     "lodash-es": "^4.17.21",
     "lowdb": "^7.0.1",
     "quick.db": "^9.1.7",
     "sequelize": "^6.37.4",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "zx": "^8.1.9"
   }
 }

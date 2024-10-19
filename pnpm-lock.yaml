@@ -23,6 +23,9 @@ importers:
       discord.js:
         specifier: ^14.16.3
         version: 14.16.3
+      form-data:
+        specifier: ^4.0.1
+        version: 4.0.1
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
@@ -41,6 +44,9 @@ importers:
       sqlite3:
         specifier: ^5.1.7
         version: 5.1.7
+      zx:
+        specifier: ^8.1.9
+        version: 8.1.9
 
 packages:
 
@@ -101,6 +107,12 @@ packages:
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
+  '@types/fs-extra@11.0.4':
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+
+  '@types/jsonfile@6.1.4':
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
@@ -750,6 +762,11 @@ packages:
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
+  zx@8.1.9:
+    resolution: {integrity: sha512-UHuLHphHmsBYKkAchkSrEN4nzDyagafqC9HUxtc1J7eopaScW6H9dsLJ1lmkAntnLtDTGoM8fa+jrJrXiIfKFA==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
+
 snapshots:
 
   '@discordjs/builders@1.9.0':
@@ -829,6 +846,17 @@ snapshots:
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 0.7.34
+
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 22.7.5
+    optional: true
+
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 22.7.5
+    optional: true
 
   '@types/ms@0.7.34': {}
 
@@ -1561,3 +1589,8 @@ snapshots:
   ws@8.18.0: {}
 
   yallist@4.0.0: {}
+
+  zx@8.1.9:
+    optionalDependencies:
+      '@types/fs-extra': 11.0.4
+      '@types/node': 22.7.5
